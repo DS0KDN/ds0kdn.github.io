@@ -1278,9 +1278,12 @@ for (var i = 0; i < spots.length; i ++) {
 		clickable: true  // 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
     });
 	
+	var spotNumber = parseInt(spots[i][0].substring(3));
+	
 	// 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
 	// 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-	var iwContent = '<div style="padding:5px;white-space:nowrap;line-height:1.6;padding:10px"><span style="font-weight:bold;font-size:x-large">' + spots[i][1] + '</span><br />'
+	var iwContent = '<div style="padding:5px;white-space:nowrap;line-height:1.6;padding:10px"><span style="font-weight:bold;font-size:x-large">' + spots[i][1] + '</span>'
+		+ ' <a href="https://docs.google.com/spreadsheets/d/1GFZ5mhypzQz9_q05UnMwN8ASdsyBvSaRVBYqi1W4tsA/edit#gid=1773091484&range=A' + _getRowNumber(spotNumber) + '" style="color:#333;font-size:small" target="_blank">[정보변경]</a><br />'
 		+ spots[i][2] + '<br />'
 		+ '공원 권역 내 차량 진입 : ' + _code2str(true, spots[i][5]) + '<br />'
 		+ '공원 권역 밖 차량 근접 : ' + _code2str(true, spots[i][6]) + '<br />'
@@ -1318,6 +1321,14 @@ function _code2str(possible_or_have, code) {
 		default:
 		return '기타';
 	}
+}
+function _getRowNumber(spotNumber) {
+	if (spotNumber <= 45) return spotNumber + 6;
+	else if (spotNumber <= 65) return spotNumber + 5;
+	else if (spotNumber <= 67) return spotNumber + 4;
+	else if (spotNumber <= 278) return spotNumber + 3;
+	else if (spotNumber <= 281) return spotNumber + 2;
+	else return spotNumber + 1;
 }
 
 // 로드뷰 객체를 생성합니다 
