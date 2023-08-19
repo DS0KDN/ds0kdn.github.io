@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Sheets JavaScript API Spreadsheet Tutorial</title>
+<link rel='stylesheet' href='style.css' type='text/css' />
+<link rel='stylesheet' href='form.css' type='text/css' />
+</head>
+<body>
+    <div class="phppot-container">
+        <h1>Google Sheets JavaScript API Spreadsheet Tutorial</h1>
+        <p>This tutorial is to help you learn on how to read Google
+            Sheets (spreadsheet) using JavaScript Google API.</p>
+        <button id="authorize_btn" onclick="authorizeGoogleAccess()">Authorize
+            Google Sheets Access</button>
+
+        <button id="signout_btn" onclick="signoutGoogle()">Sign
+            Out</button>
+
+        <pre id="content"></pre>
+    </div>
+    <script async defer src="https://apis.google.com/js/api.js"
+        onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client"
+        onload="gisLoaded()"></script>
+</body>
+</html>
