@@ -2,24 +2,44 @@
 <html>
 <head>
 <title>Google Sheets JavaScript API Spreadsheet Tutorial</title>
-<link rel='stylesheet' href='style.css' type='text/css' />
-<link rel='stylesheet' href='form.css' type='text/css' />
+<style>
+textarea {
+    width : 100%;
+    height : auto;
+    padding: 10px;
+    border: 1px solid lightsalmon;
+    transition: box-shadow 0.3s;
+    background: lightyellow;
+    border-radius: 5px;
+    color: black;
+    font-family: 'Helvetica', 'sans serif';
+    font-size: x-large;
+    font-weight: bold;
+    line-height: 1.5;
+}
+</style>
 </head>
 <body>
     <div class="phppot-container">
         <h1>Google Sheets JavaScript API Spreadsheet Tutorial</h1>
-        <p>This tutorial is to help you learn on how to read Google
-            Sheets (spreadsheet) using JavaScript Google API.</p>
-        <button id="authorize_btn" onclick="authorizeGoogleAccess()">Authorize
-            Google Sheets Access</button>
-
-        <button id="signout_btn" onclick="signoutGoogle()">Sign
-            Out</button>
-
-        <textarea id="content"></textarea>
+        <p>This tutorial is to help you learn on how to read Google Sheets (spreadsheet) using JavaScript Google API.</p>
+        <button id="authorize_btn" onclick="authorizeGoogleAccess()">Authorize Google Sheets Access</button>
+        <button id="signout_btn" onclick="signoutGoogle()">Sign Out</button>
     </div>
-
+	<textarea id="content" rows="20"></textarea>
+	<button id="copy" onclick="copyContent()">Copy</button>
 <script type="text/javascript">
+function copyContent() {
+	var copyText = document.getElementById("content");
+
+	// Select the text field
+	copyText.select();
+	copyText.setSelectionRange(0, 99999); // For mobile devices
+
+	// Copy the text inside the text field
+	navigator.clipboard.writeText(copyText.value);
+}
+
 // You should set your Google client ID and Google API key
 const GOOGLE_CLIENT_ID = '965842399373-aogajvd91ldpp0huns08r2v9mga79u4a.apps.googleusercontent.com';
 const GOOGLE_API_KEY = 'AIzaSyD_hd8Q4SvKBxTI_Pz4-P1uuYeLUOix7uE';
