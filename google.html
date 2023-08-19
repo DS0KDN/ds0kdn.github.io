@@ -16,7 +16,7 @@
         <button id="signout_btn" onclick="signoutGoogle()">Sign
             Out</button>
 
-        <pre id="content"></pre>
+        <textarea id="content"></textarea>
     </div>
 
 <script type="text/javascript">
@@ -133,9 +133,9 @@ async function listSpots() {
 		document.getElementById('content').innerText = 'No values found.';
 		return;
 	}
-	const output = range.values.reduce(
-		(str, row) => str + '["' + row.join('","') + '"],\n',
-		'var spots = [\n') + '\n];';
+	// ["HL-0019","변산반도국립공원","Mountain Park","35.6232","126.583","미파악","미파악","미파악","미파악","미파악",""],
+	
+	const output = 'var spots = [\n' + range.values.map(row => '["' + row.join('","') + '"]').join(',\n') + '\n];';
 	document.getElementById('content').innerText = output;
 }
 </script>
