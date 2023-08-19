@@ -152,7 +152,7 @@ async function listSpots() {
 	}
 	// ["HL-0019","변산반도국립공원","Mountain Park","35.6232","126.583","미파악","미파악","미파악","미파악","미파악",""],
 	
-	const output = 'var spots = [\n' + range.values.map(row => row.length < 11 ? row.push('') : 0).map(row => '["' + row.join('","') + '"]').join(',\n') + '\n];';
+	const output = 'var spots = [\n' + range.values.map(row => '["' + row.join('","') + (row.length < 11 ? '","' : '') + '"]').join(',\n') + '\n];';
 	document.getElementById('content').value = output;
 }
 </script>
