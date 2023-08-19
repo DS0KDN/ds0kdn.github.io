@@ -134,8 +134,8 @@ async function listSpots() {
 		return;
 	}
 	const output = range.values.reduce(
-		(str, row) => `${str}${row[0]}, ${row[1]}\n`,
-		'Spot ID, 공원 이름:\n');
+		(str, row) => str + '["' + row.join('","') + '"],\n',
+		'var spots = [\n') + '\n];';
 	document.getElementById('content').innerText = output;
 }
 </script>
