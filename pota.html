@@ -133,12 +133,11 @@ for (var i = 0; i < spots.length; i ++) {
 	var iwContent = '<div style="padding:5px;white-space:nowrap;line-height:1.6;padding:10px"><span style="font-weight:bold;font-size:x-large">' + spots[i][1] + '</span>'
 		+ ' <a href="https://docs.google.com/spreadsheets/d/1GFZ5mhypzQz9_q05UnMwN8ASdsyBvSaRVBYqi1W4tsA/edit#gid=1773091484&range=A' + _getRowNumber(spotNumber) + '" style="color:#333;font-size:small" target="_blank">[정보변경]</a><br />'
 		+ spots[i][2] + '<br />'
-		+ '공원 권역 내 차량 진입 : ' + spots[i][5] + '<br />'
-		+ '공원 권역 밖 차량 근접 : ' + spots[i][6] + '<br />'
-		+ '주차장 : ' + spots[i][7] + '<br />'
-		+ '화장실 : ' + spots[i][8] + '<br />'
-		+ 'SOTA : ' + spots[i][9] + '<br />'
-		+ (spots[i][10].length != 0 ? '기타 : ' + spots[i][10] + '<br />' : '')
+		+ '차량 접근성 : ' + spots[i][5] + '<br />'
+		+ '주차장 : ' + spots[i][6] + '<br />'
+		+ '화장실 : ' + spots[i][7] + '<br />'
+		+ 'SOTA : ' + spots[i][8] + '<br />'
+		+ (spots[i][9].length != 0 ? '기타 : ' + spots[i][9] + '<br />' : '')
 		+ '<a href="https://pota.app/#/park/' + spots[i][0] + '" style="color:blue" target="_blank">POTA.APP ' + spots[i][0] + '</a></div>';
 
 	// 인포윈도우를 생성합니다
