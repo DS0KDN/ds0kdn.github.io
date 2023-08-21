@@ -894,7 +894,7 @@ var spots = [
 ["HL-0898","부천중앙공원","Bucheon Jungang Neighborhood Provincial Park","37.5006043","126.7637161","미파악","미파악","미파악","미파악",""],
 ["HL-0899","부평공원","Bupyeong Neighborhood Provincial Park","37.4895567","126.7146464","미파악","미파악","미파악","미파악",""],
 ["HL-0900","북산공원","Buksan Mountain Neighborhood Provincial Park","34.45968534","126.816904","미파악","미파악","미파악","미파악",""],
-["HL-0901","분당중앙공원","Bundang Central Neighborhood Provincial Park","37.38030721","127.1211791","미파악","미파악","미파악","미파악",""],
+["HL-0901","분당중앙공원","Bundang Central Neighborhood Provincial Park","37.38030721","127.1211791","미파악","무료","있음","가능","주차장 협소, 배달가능"],
 ["HL-0902","불광산근린공원","Bulgwangsan Neighborhood Provincial Park","35.377115","129.2325453","미파악","미파악","미파악","미파악",""],
 ["HL-0903","불미골공원","Bulmigol Neighborhood Provincial Park","35.86066879","128.5091644","미파악","미파악","미파악","미파악",""],
 ["HL-0904","빛가람호수공원","Bitgaram Waterside Neighborhood Provincial Park","35.01395501","126.7949874","미파악","미파악","미파악","미파악",""],
